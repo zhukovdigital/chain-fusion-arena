@@ -13,6 +13,7 @@
       href="https://fonts.cdnfonts.com/css/proxima-nova-2"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body class="bg-black">
@@ -429,10 +430,10 @@
           Platform Features:
         </h2>
         <ul
-          class="list-none space-y-[60px] max-w-[684px] px-10 lg:px-0 mx-auto"
+          class="list-none space-y-[60px] max-w-[775px] px-10 lg:px-0 mx-auto"
         >
           <li
-            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] relative"
           >
             <span class="flex min-w-[55px] justify-center">
               <img src="./assets/icons/victory-hand.svg" alt="victory-hand" />
@@ -445,7 +446,7 @@
             >
           </li>
           <li
-            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] relative"
           >
             <span class="flex min-w-[55px] justify-center">
               <img src="./assets/icons/ai-driven.svg" alt="victory-hand" />
@@ -458,7 +459,7 @@
             >
           </li>
           <li
-            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] relative"
           >
             <span class="flex min-w-[55px] justify-center">
               <img src="./assets/icons/hands.svg" alt="victory-hand" />
@@ -471,7 +472,7 @@
             >
           </li>
           <li
-            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] relative"
           >
             <span class="flex min-w-[55px] justify-center">
               <img src="./assets/icons/light.svg" alt="victory-hand" />
@@ -531,10 +532,33 @@
       </video>
     </footer>
     <script type="text/javascript">
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(120px)";
+        section.style.transition = "all 1s ease-out";
+      });
+
       document.addEventListener("DOMContentLoaded", function () {
         var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
         if ("IntersectionObserver" in window) {
+          const animatedSectionsObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((section) => {
+                if (section.isIntersecting) {
+                  section.target.style.transform = "translateY(0px)";
+                  section.target.style.opacity = "1";
+                  animatedSectionsObserver.unobserve(section.target);
+                }
+              });
+            }
+          );
+
+          sections.forEach(section => {
+            animatedSectionsObserver.observe(section);
+          });
+          
           var lazyVideoObserver = new IntersectionObserver(function (
             entries,
             observer
