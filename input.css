@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply text-white overflow-x-hidden;
+}
+
+.chillax {
+  font-family: "Chillax", sans-serif;
+}
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.proxima-nova {
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.container {
+  @apply mx-auto w-full max-w-[1728px];
+}
+
+.hero-text {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(
+      90deg,
+      #ff3bff 0%,
+      #ecbfbf 38.02%,
+      #5c24ff 75.83%,
+      #d94fd5 100%
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.vision-text {
+  background: linear-gradient(
+    84.39deg,
+    #ff3bff -131.86%,
+    #ecbfbf -45.4%,
+    #5c24ff 40.56%,
+    #d94fd5 95.53%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.games-text {
+  background: linear-gradient(
+    95.87deg,
+    #ff3bff 4.66%,
+    #ecbfbf 78.59%,
+    #5c24ff 152.11%,
+    #d94fd5 199.11%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.ai-text {
+  background: linear-gradient(91.06deg, #2e62eb 2.26%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.cross-chain-text {
+  background: linear-gradient(79.79deg, #2e62eb 15.33%, #aa14f0 93.81%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.community-text {
+  background: linear-gradient(91.06deg, #2e62eb 2.26%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.get-started-button {
+  @apply w-[176px] h-[70px] border-2 border-transparent rounded-[100px];
+  background: linear-gradient(
+    90deg,
+    #ff3bff 0%,
+    #ecbfbf 38.02%,
+    #5c24ff 75.83%,
+    #d94fd5 100%
+  );
+}
+
+.get-started-button > span {
+  @apply w-full h-[66px] flex items-center justify-center bg-black rounded-[100px] text-xl;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.blured-elips-100 {
+  filter: blur(100px);
+}
+
+.blured-elips-125 {
+  filter: blur(125px);
+}
+
+.footer-gradient {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media (max-width: 1024px) {
+  nav {
+    @apply absolute top-[105.12px] w-full h-auto transition-all bg-black;
+  }
+  button[data-opened="false"] + nav {
+    @apply opacity-0;
+    transform: translateY(calc(-100% - 105.12px));
+  }
+  button[data-opened="false"] > .open-icon,
+  button[data-opened="true"] > .close-icon {
+    @apply block;
+  }
+  button[data-opened="true"] > .open-icon,
+  button[data-opened="false"] > .close-icon {
+    @apply hidden;
+  }
+  button[data-opened="true"] + nav {
+    @apply opacity-100 translate-y-0;
+  }
+}

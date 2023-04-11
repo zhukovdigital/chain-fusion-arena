@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chain Fusion Arena.</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@700,400,600,500&f[]=chillax@600,500,300,700,400&f[]=space-grotesk@300,700,500,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/proxima-nova-2"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+  <body class="bg-black">
+    <header class="w-full">
+      <div
+        class="flex justify-between items-center container py-[36px] lg:py-[42.12px] pl-[19px] pr-[24px] lg:px-[58.46px]"
+      >
+        <a class="flex gap-[10.36px] lg:gap-[15.89px]" href="/">
+          <img
+            src="/assets/logo.svg"
+            class="w-[39.64px] lg:w-auto"
+            alt="logo"
+          />
+          <span class="chillax lg:text-2xl font-semibold relative lg:top-2"
+            >ChainFusionArena.</span
+          >
+        </a>
+        <button
+          data-opened="false"
+          onclick="toggleMenu(event);"
+          class="w-[28px] h-[22px] lg:hidden"
+        >
+          <svg
+            class="close-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#FFFFFF"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+          <svg
+            class="open-icon"
+            width="28"
+            height="22"
+            viewBox="0 0 28 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="28"
+              height="2"
+              rx="1"
+              fill="url(#paint0_linear_262_45)"
+            />
+            <rect
+              y="10"
+              width="28"
+              height="2"
+              rx="1"
+              fill="url(#paint1_linear_262_45)"
+            />
+            <rect
+              y="20"
+              width="28"
+              height="2"
+              rx="1"
+              fill="url(#paint2_linear_262_45)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_262_45"
+                x1="2.59544"
+                y1="-0.181332"
+                x2="2.93547"
+                y2="3.78935"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#C54A92" />
+                <stop offset="1" stop-color="#2E62EB" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_262_45"
+                x1="2.59544"
+                y1="9.81867"
+                x2="2.93547"
+                y2="13.7893"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#C54A92" />
+                <stop offset="1" stop-color="#2E62EB" />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_262_45"
+                x1="2.59544"
+                y1="19.8187"
+                x2="2.93547"
+                y2="23.7893"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#C54A92" />
+                <stop offset="1" stop-color="#2E62EB" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </button>
+        <nav
+          class="flex flex-col lg:flex-row items-center gap-[26px] pr-[39.54px] z-20"
+        >
+          <a class="text-lg font-medium inline-block" href="/services"
+            >Services</a
+          >
+          <a class="text-lg font-medium inline-block" href="/tokenomist"
+            >Tokenomist</a
+          >
+          <a class="text-lg font-medium inline-block" href="/features"
+            >Features</a
+          >
+          <a class="text-lg font-medium inline-block" href="/roadmap"
+            >Roadmap</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="container lg:pb-[498px] relative">
+        <h1
+          class="hero-text text-[52px] lg:text-8xl font-medium text-center mt-[43.9px] lg:mt-[32.51px] mb-[30px] lg:mb-3.5"
+        >
+          Chain Fusion Arena.
+        </h1>
+        <h2
+          class="text-[30px] lg:text-5xl font-medium max-w-[599px] text-center mx-auto mb-[41px] pr-[15px] pl-[24px] lg:px-0"
+        >
+          Uniting the World Through AI-Powered Gaming
+        </h2>
+        <div class="lg:hidden flex justify-center w-full overflow-hidden">
+          <img
+            src="/assets/hero-image.png"
+            class="min-w-[607px] w-full"
+            alt="hero-image"
+          />
+        </div>
+        <div class="flex lg:hidden justify-center mt-[28px] mb-[65px]">
+          <button class="get-started-button">
+            <span>Get started</span>
+          </button>
+        </div>
+        <p
+          class="text-xl max-w-[838px] text-center mx-auto mb-[38px] pl-[21px] pr-[14px] lg:px-0"
+        >
+          Welcome to the exhilarating universe of ChainFusionArena, the gaming
+          revolution that redefines the very essence of immersive, interactive
+          experiences. By connecting millions of players across multiple
+          blockchains and harnessing the power of artificial intelligence, we
+          usher in a new era of gaming that transcends borders and limitations.
+        </p>
+        <div class="hidden lg:flex justify-center">
+          <button class="get-started-button">
+            <span>Get started</span>
+          </button>
+        </div>
+        <img
+          src="/assets/hero-image.png"
+          class="hidden lg:block absolute w-full h-auto max-w-[1465px] bottom-0 z-[-1] left-1/2 -translate-x-1/2"
+          alt="hero-image"
+        />
+        <div
+          class="hidden lg:block bg-[#FC4FF6] absolute w-[446px] h-[412.76px] blured-elips-100 rounded-full opacity-20 z-[-1] right-[187px] -bottom-[74px]"
+        ></div>
+        <div
+          class="hidden lg:block bg-[#8593E8] absolute w-[464px] h-[427.57px] blured-elips-100 rounded-full opacity-20 z-[-1] left-[187px] -bottom-[50.86px]"
+        ></div>
+      </section>
+      <section
+        class="pt-[41px] lg:pt-[157.14px] pb-[32.5px] lg:pb-[130.5px] container px-[9px] lg:px-[135px]"
+      >
+        <div
+          class="w-full flex flex-col lg:flex-row items-center justify-between lg:gap-[40px]"
+        >
+          <h2 class="text-[40px] font-medium lg:hidden mb-[26px]">
+            <span class="vision-text">Vision</span>.
+          </h2>
+          <img
+            src="/assets/vision.png"
+            loading="lazy"
+            class="max-w-full lg:max-w-[460px] 2xl:max-w-[641px] w-full h-auto"
+            alt="vision"
+          />
+          <div
+            class="lg:space-y-[46px] lg:max-w-[549px] pl-[32px] pr-[9px] lg:pl-0 lg:pr-[63px]"
+          >
+            <h2 class="text-8xl font-medium hidden lg:inline">
+              <span class="vision-text">Vision</span>.
+            </h2>
+            <p class="proxima-nova text-xl mt-[41px] lg:mt-0">
+              At ChainFusionArena, we believe in the transformative potential of
+              a groundbreaking gaming platform that unites players from various
+              blockchain networks in a shared, captivating experience. Our
+              pioneering approach combines state-of-the-art AI technology with a
+              passion for gaming, giving each player a personalized AI companion
+              that elevates gameplay to unprecedented heights.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-[32.5px] lg:py-[130.5px] container px-[9px] lg:px-[135px] relative z-10"
+      >
+        <div
+          class="w-full flex lg:flex-row flex-col-reverse items-center justify-between lg:gap-[40px]"
+        >
+          <div class="lg:space-y-[46px] mt-[34.53px] lg:mt-0 lg:max-w-[591px]">
+            <h2 class="text-8xl font-medium hidden lg:inline">
+              <span class="games-text">Games</span>.
+            </h2>
+            <p class="proxima-nova text-xl pl-[32px] pr-[29px] lg:px-0">
+              Embark on a journey through our diverse collection of meticulously
+              crafted games, catering to an extensive range of preferences and
+              skill levels. From adrenaline-fueled action and mind-bending
+              puzzles to enthralling adventures and strategic challenges,
+              ChainFusionArena's rich gaming library promises an engaging
+              experience for every type of player.
+            </p>
+          </div>
+          <img
+            src="/assets/games.png"
+            loading="lazy"
+            class="2xl:max-w-[612px] w-full h-auto max-w-full lg:max-w-[460px]"
+            alt="games"
+          />
+          <h2 class="text-[40px] font-medium lg:hidden mb-[26px]">
+            <span class="games-text">Games</span>.
+          </h2>
+        </div>
+        <div
+          class="bg-[#8593E8] absolute w-[464px] h-[427.57px] blured-elips-100 rounded-full opacity-20 z-[-1] left-[177px] top-[57.29px]"
+        ></div>
+        <div
+          class="bg-[#5D6EF3] absolute w-[464px] h-[427.57px] blured-elips-125 rounded-full opacity-20 z-[-1] top-[-26px] left-[661px]"
+        ></div>
+        <div
+          class="bg-[#FC4FF6] absolute w-[464px] h-[427.57px] blured-elips-100 rounded-full opacity-20 z-[-1] right-[197px] top-[95.24px]"
+        ></div>
+      </section>
+      <section class="relative w-full lg:px-[135px]">
+        <div
+          class="absolute overflow-hidden flex justify-center top-[-150px] lg:top-[-450px] left-0 w-screen"
+        >
+          <img
+            class="w-[1116px] lg:w-full"
+            src="/assets/line-1.svg"
+            alt="line 1"
+          />
+        </div>
+        <div
+          class="w-full mt-[53px] lg:mt-0 overflow-hidden flex justify-center"
+        >
+          <video
+            class="min-w-[702px] lg:min-w-auto h-auto lg:w-full lg:max-w-[1440px] z-[-1] lazy"
+            autoplay
+            muted
+            loop
+            playsinline
+            width="1440"
+            height="809"
+          >
+            <source data-src="/assets/games-animation.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <img
+          class="absolute bottom-[-2440px] lg:bottom-[-450px] lg:min-w-auto min-w-[1200px] lg:w-screen left-0"
+          src="/assets/line-2.svg"
+          alt="line 2"
+        />
+      </section>
+      <section
+        class="lg:pt-[157.14px] pt-[48px] pb-[32.5px] lg:pb-[130.5px] container px-[9px] lg:px-[135px]"
+      >
+        <div
+          class="w-full flex flex-col lg:flex-row items-center justify-between lg:gap-[40px]"
+        >
+          <h2 class="text-[40px] font-medium lg:hidden mb-[26px]">
+            <span class="ai-text">AI Companions</span>.
+          </h2>
+          <img
+            src="/assets/ai-companions.png"
+            loading="lazy"
+            class="max-w-full lg:max-w-[460px] 2xl:max-w-[612px] w-full h-auto z-20"
+            alt="ai companions"
+          />
+          <div class="space-y-[36.53px] lg:space-y-[46px] lg:max-w-[686px]">
+            <h2 class="text-8xl font-medium hidden lg:inline">
+              <span class="ai-text">AI Companions</span>.
+            </h2>
+            <p
+              class="proxima-nova text-xl lg:max-w-[654px] pl-[27px] pr-[24px] lg:px-0"
+            >
+              Unlock the limitless potential of AI companions, your dedicated
+              gaming sidekicks designed to enhance your gameplay experience with
+              their unique abilities and customizable features. As you progress
+              through ChainFusionArena's vast gaming universe, your AI
+              companions evolve alongside you, adapting to your playstyle and
+              becoming an invaluable ally.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-[32.5px] lg:py-[130.5px] container px-[9px] lg:px-[135px] relative z-10"
+      >
+        <div
+          class="w-full flex lg:flex-row flex-col-reverse items-center justify-between lg:gap-[40px]"
+        >
+          <div class="lg:space-y-[46px] mt-[24.04px] lg:mt-0 lg:max-w-[591px]">
+            <h2 class="text-8xl font-medium hidden lg:inline">
+              <span class="cross-chain-text">Cross-Chain Integration</span>.
+            </h2>
+            <p class="proxima-nova text-xl pl-[32px] pr-[29px] lg:px-0">
+              Step into the future with ChainFusionArena's trailblazing
+              cross-chain technology, enabling seamless integration of various
+              blockchain networks and fostering a truly interconnected global
+              gaming ecosystem. Our commitment to breaking down barriers and
+              transcending the limitations of traditional gaming environments
+              empowers players with a unified, borderless platform.
+            </p>
+          </div>
+          <img
+            src="/assets/cross-chain-integration.png"
+            loading="lazy"
+            class="2xl:max-w-[612px] w-full h-auto max-w-full lg:max-w-[460px]"
+            alt="games"
+          />
+          <h2 class="text-[40px] font-medium lg:hidden mb-[26px] text-center">
+            <span class="cross-chain-text">Cross-Chain Integration</span>.
+          </h2>
+        </div>
+        <div
+          class="hidden lg:block bg-[#8593E8] absolute w-[464px] h-[427.57px] blured-elips-100 rounded-full opacity-20 z-[-1] left-[177px] top-[57.29px]"
+        ></div>
+        <div
+          class="hidden lg:block bg-[#5D6EF3] absolute w-[464px] h-[427.57px] blured-elips-125 rounded-full opacity-20 z-[-1] top-[-26px] left-[661px]"
+        ></div>
+        <div
+          class="hidden lg:block bg-[#FC4FF6] absolute w-[464px] h-[427.57px] blured-elips-100 rounded-full opacity-20 z-[-1] right-[197px] top-[95.24px]"
+        ></div>
+      </section>
+      <section
+        class="pt-[41px] lg:pt-[157.14px] pb-[245px] lg:pb-[174px] container px-[9px] lg:px-[135px]"
+      >
+        <div
+          class="w-full flex flex-col lg:flex-row items-center justify-between lg:gap-[40px]"
+        >
+          <h2 class="text-[40px] font-medium lg:hidden mb-[26px]">
+            <span class="community-text">Community</span>.
+          </h2>
+          <img
+            src="/assets/community.png"
+            loading="lazy"
+            class="max-w-full lg:max-w-[460px] 2xl:max-w-[641px] w-full h-auto"
+            alt="vision"
+          />
+          <div
+            class="lg:space-y-[76px] lg:max-w-[549px] pl-[32px] pr-[9px] lg:pl-0 lg:pr-[63px]"
+          >
+            <h2 class="text-8xl font-medium hidden lg:inline">
+              <span class="community-text">Community</span>.
+            </h2>
+            <p class="proxima-nova text-xl mt-[41px] lg:mt-0">
+              Become part of our flourishing global community, a vibrant
+              tapestry of gamers, developers, and AI enthusiasts united by a
+              shared passion for innovation and progress. Engage in stimulating
+              discussions, share your gameplay experiences, and contribute to
+              the continuous growth and evolution of the ChainFusionArena
+              ecosystem.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative pt-[293px] lg:pt-[129px] pb-[49px] lg:pb-[187px] overflow-hidden"
+      >
+        <video
+          class="absolute w-[876px] lg:w-full left-0 top-0 h-[415px] lg:h-full object-cover object-left lg:object-center z-[-1] lazy"
+          autoplay
+          muted
+          loop
+          playsinline
+          width="1753"
+          height="830"
+        >
+          <source data-src="/assets/tokenomics.mp4" type="video/mp4" />
+        </video>
+        <h2
+          class="text-center text-[32px] lg:text-5xl font-bold proxima-nova mb-[109px] lg:mb-[97px]"
+        >
+          Tokenomics
+        </h2>
+        <p
+          class="proxima-nova mb-[60px] lg:mb-[87px] max-w-[1100px] overflow-hidden text-center mx-auto text-xl px-[25px] lg:px-0 lg:text-[32px]"
+        >
+          Discover the ingenious
+          <strong>tokenomics of ChainFusionArena</strong>, which allows players
+          to earn rewards and unlock exclusive features within the gaming
+          ecosystem. Delve into the inner workings of our
+          <strong>native token</strong>, its distribution, and the myriad ways
+          it adds value to the ChainFusionArena experience.
+        </p>
+        <div class="flex justify-center">
+          <button class="get-started-button">
+            <span>Get started</span>
+          </button>
+        </div>
+      </section>
+      <section class="container pt-[49px] lg:pt-[155px]">
+        <h2
+          class="proxima-nova font-bold text-[32px] lg:text-5xl text-center mb-[38px] lg:mb-[75px]"
+        >
+          Platform Features:
+        </h2>
+        <ul
+          class="list-none space-y-[60px] max-w-[684px] px-10 lg:px-0 mx-auto"
+        >
+          <li
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+          >
+            <span class="flex min-w-[55px] justify-center">
+              <img src="/assets/icons/victory-hand.svg" alt="victory-hand" />
+            </span>
+            <span class="text-sm lg:text-2xl proxima-nova"
+              ><strong class="text-[#2E62EB]">Immersive Gameplay:</strong>
+              Immerse yourself in a world of captivating visuals, responsive
+              controls, and unparalleled performance, meticulously optimized for
+              an unforgettable gaming experience.</span
+            >
+          </li>
+          <li
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+          >
+            <span class="flex min-w-[55px] justify-center">
+              <img src="/assets/icons/ai-driven.svg" alt="victory-hand" />
+            </span>
+            <span class="text-sm lg:text-2xl proxima-nova"
+              ><strong class="text-[#2E62EB]">AI-Driven Tournaments:</strong>
+              Compete in AI-assisted tournaments with players from around the
+              world, showcasing your skills and earning rewards while forging
+              lasting connections.</span
+            >
+          </li>
+          <li
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+          >
+            <span class="flex min-w-[55px] justify-center">
+              <img src="/assets/icons/hands.svg" alt="victory-hand" />
+            </span>
+            <span class="text-sm lg:text-2xl proxima-nova"
+              ><strong class="text-[#2E62EB]">Social Integration:</strong>
+              Connect with fellow gamers on our integrated social platform,
+              where you can chat, form alliances, and share your gaming
+              conquests.</span
+            >
+          </li>
+          <li
+            class="inline-flex flex-col lg:flex-row lg:items-start gap-[31px] lg:gap-[38px] lg:pl-[91px] relative"
+          >
+            <span class="flex min-w-[55px] justify-center">
+              <img src="/assets/icons/light.svg" alt="victory-hand" />
+            </span>
+            <span class="text-sm lg:text-2xl proxima-nova"
+              ><strong class="text-[#2E62EB]">User-Generated Content:</strong>
+              Unleash your creativity by designing custom games and mods using
+              our intuitive tools, contributing to the ever-expanding
+              ChainFusionArena universe.</span
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="pt-[76px] lg:pt-[317px] relative">
+        <h2
+          class="proxima-nova font-bold text-[32px] lg:text-5xl text-center relative top-[100px] lg:top-0"
+        >
+          Roadmap
+        </h2>
+        <div
+          class="hidden lg:block bg-[#8593E8] absolute w-[464px] h-[427.57px] blured-elips-100 rounded-full opacity-20 z-[-1] left-[177px] top-[57.29px]"
+        ></div>
+        <div
+          class="hidden lg:block bg-[#5D6EF3] absolute w-[464px] h-[427.57px] blured-elips-125 rounded-full opacity-20 z-[-1] top-[-26px] left-[661px]"
+        ></div>
+        <div
+          class="hidden lg:block bg-[#FC4FF6] absolute w-[464px] h-[427.57px] blured-elips-100 rounded-full opacity-20 z-[-1] right-[197px] top-[95.24px]"
+        ></div>
+        <img
+          class="w-full object-contain hidden lg:block"
+          src="/assets/roadmap.svg"
+          alt="stacked area"
+          loading="lazy"
+        />
+        <img
+          class="lg:hidden w-full object-cover"
+          alt="stacked area"
+          loading="'lazy"
+          src="/assets/roadmap-mobile.svg"
+        />
+      </section>
+    </main>
+    <footer class="w-full relative mt-[108px]">
+      <div
+        class="absolute w-full left-0 top-0 h-[50px] lg:h-[460px] footer-gradient"
+      ></div>
+      <video
+        class="w-full h-auto object-contain lazy"
+        autoplay
+        muted
+        loop
+        playsinline
+        width="1792"
+        height="1008"
+      >
+        <source data-src="/assets/footer.mp4" type="video/mp4" />
+      </video>
+    </footer>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+        if ("IntersectionObserver" in window) {
+          var lazyVideoObserver = new IntersectionObserver(function (
+            entries,
+            observer
+          ) {
+            entries.forEach(function (video) {
+              if (video.isIntersecting) {
+                for (var source in video.target.children) {
+                  var videoSource = video.target.children[source];
+                  if (
+                    typeof videoSource.tagName === "string" &&
+                    videoSource.tagName === "SOURCE"
+                  ) {
+                    videoSource.src = videoSource.dataset.src;
+                  }
+                }
+
+                video.target.load();
+                video.target.classList.remove("lazy");
+                lazyVideoObserver.unobserve(video.target);
+              }
+            });
+          });
+
+          lazyVideos.forEach(function (lazyVideo) {
+            lazyVideoObserver.observe(lazyVideo);
+          });
+        }
+      });
+
+      function toggleMenu(event) {
+        if (event.currentTarget.dataset.opened === "true") {
+          event.currentTarget.dataset.opened = "false";
+        } else {
+          event.currentTarget.dataset.opened = "true";
+        }
+      }
+    </script>
+  </body>
+</html>
