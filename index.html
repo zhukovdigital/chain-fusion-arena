@@ -116,7 +116,7 @@
           </svg>
         </button>
         <nav
-          class="flex flex-col lg:flex-row items-center gap-[26px] pr-[39.54px] z-20"
+          class="flex flex-col lg:flex-row items-center gap-[26px] lg:pr-[39.54px] z-20"
         >
           <a class="text-lg font-medium inline-block" href="/services"
             >Services</a
@@ -555,10 +555,10 @@
             }
           );
 
-          sections.forEach(section => {
+          sections.forEach((section) => {
             animatedSectionsObserver.observe(section);
           });
-          
+
           var lazyVideoObserver = new IntersectionObserver(function (
             entries,
             observer
@@ -591,8 +591,12 @@
       function toggleMenu(event) {
         if (event.currentTarget.dataset.opened === "true") {
           event.currentTarget.dataset.opened = "false";
+          document.body.style.overflowY = null;
+          document.documentElement.style.overflowY = null;
         } else {
           event.currentTarget.dataset.opened = "true";
+          document.body.style.overflowY = "hidden";
+          document.documentElement.style.overflowY = "hidden";
         }
       }
     </script>

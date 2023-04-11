@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply text-white overflow-x-hidden;
+  @apply text-white overflow-x-hidden lg:overflow-y-auto;
 }
 
 .chillax {
@@ -120,11 +120,12 @@ body {
 
 @media (max-width: 1024px) {
   nav {
-    @apply absolute top-[105.12px] w-full h-auto transition-all bg-black;
+    @apply top-[105.12px] w-full left-0 fixed transition-all bg-black flex justify-center items-center;
+    height: calc(100dvh - 105.12px);
   }
   button[data-opened="false"] + nav {
     @apply opacity-0;
-    transform: translateY(calc(-100% - 105.12px));
+    transform: translateY(calc(-100dvh - 105.12px));
   }
   button[data-opened="false"] > .open-icon,
   button[data-opened="true"] > .close-icon {

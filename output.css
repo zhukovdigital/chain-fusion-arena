@@ -985,8 +985,8 @@ video {
   max-width: 599px;
 }
 
-.max-w-\[684px\] {
-  max-width: 684px;
+.max-w-\[775px\] {
+  max-width: 775px;
 }
 
 .max-w-\[838px\] {
@@ -995,14 +995,6 @@ video {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[948px\] {
-  max-width: 948px;
-}
-
-.max-w-\[775px\] {
-  max-width: 775px;
 }
 
 .flex-shrink {
@@ -2191,10 +2183,6 @@ video {
   padding-right: 29px;
 }
 
-.pr-\[39\.54px\] {
-  padding-right: 39.54px;
-}
-
 .pr-\[9px\] {
   padding-right: 9px;
 }
@@ -2217,10 +2205,6 @@ video {
 
 .pt-\[76px\] {
   padding-top: 76px;
-}
-
-.pl-0 {
-  padding-left: 0px;
 }
 
 .text-left {
@@ -2457,10 +2441,6 @@ video {
 
 .opacity-20 {
   opacity: 0.2;
-}
-
-.opacity-0 {
-  opacity: 0;
 }
 
 .bg-blend-normal {
@@ -2717,12 +2697,6 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -2745,6 +2719,13 @@ body {
   overflow-x: hidden;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  html,
+body {
+    overflow-y: auto;
+  }
 }
 
 .chillax {
@@ -2876,20 +2857,24 @@ body {
 
 @media (max-width: 1024px) {
   nav {
-    position: absolute;
+    position: fixed;
     top: 105.12px;
-    height: auto;
+    left: 0px;
+    display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: center;
     --tw-bg-opacity: 1;
     background-color: rgb(0 0 0 / var(--tw-bg-opacity));
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+    height: calc(100dvh - 105.12px);
   }
 
   button[data-opened="false"] + nav {
     opacity: 0;
-    transform: translateY(calc(-100% - 105.12px));
+    transform: translateY(calc(-100dvh - 105.12px));
   }
 
   button[data-opened="false"] > .open-icon,
@@ -3160,8 +3145,8 @@ body {
     padding-left: 0px;
   }
 
-  .lg\:pl-\[91px\] {
-    padding-left: 91px;
+  .lg\:pr-\[39\.54px\] {
+    padding-right: 39.54px;
   }
 
   .lg\:pr-\[63px\] {
