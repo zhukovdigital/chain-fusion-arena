@@ -32,8 +32,9 @@
           >
         </a>
         <button
+          id="hamburger"
           data-opened="false"
-          onclick="toggleMenu(event);"
+          onclick="toggleMenu();"
           class="w-[28px] h-[22px] lg:hidden"
         >
           <svg
@@ -541,6 +542,28 @@
         section.style.transition = "all 1s ease-out";
       });
 
+      function changedHash() {
+        const hamburger = document.getElementById("hamburger");
+
+        hamburger.dataset.opened = "false";
+        document.body.style.overflowY = null;
+        document.documentElement.style.overflowY = null;
+      }
+
+      if ("onhashchange" in window) {
+        window.onhashchange = function () {
+          changedHash();
+        };
+      } else {
+        var storedHash = window.location.hash;
+        window.setInterval(function () {
+          if (window.location.hash != storedHash) {
+            storedHash = window.location.hash;
+            changedHash();
+          }
+        }, 100);
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
@@ -590,9 +613,11 @@
         }
       });
 
-      function toggleMenu(event) {
-        if (event.currentTarget.dataset.opened === "true") {
-          event.currentTarget.dataset.opened = "false";
+      function toggleMenu() {
+        const hamburger = document.getElementById("hamburger");
+
+        if (hamburger.dataset.opened === "true") {
+          hamburger.dataset.opened = "false";
           document.body.style.overflowY = null;
           document.documentElement.style.overflowY = null;
         } else {
