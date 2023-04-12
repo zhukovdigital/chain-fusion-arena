@@ -2714,6 +2714,10 @@ video {
   content: var(--tw-content);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overflow-x: hidden;
